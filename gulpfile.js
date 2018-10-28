@@ -21,13 +21,6 @@
     stripCssComments = require('gulp-strip-css-comments'),
     cssDeclarationSorter = require('css-declaration-sorter');
 
-  // Попробовать позже https://www.npmjs.com/package/gulp-pug-inheritance
-  // jadeInheritance = require('gulp-jade-inheritance'),
-  // changed = require('gulp-changed'),
-  // cached = require('gulp-cached'),
-  // gulpif = require('gulp-if'),
-  // filter = require('gulp-filter');
-
   //write html by pug
   gulp.task('views', function buildHTML() {
     return gulp
