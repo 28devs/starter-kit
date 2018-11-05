@@ -101,7 +101,11 @@
 
   // write js
   gulp.task('scripts', function() {
-    return gulp.src('app/scripts/**').pipe(gulp.dest('dest/scripts'));
+    return gulp.src('app/scripts/**').pipe(
+        babel({
+          presets: ['@babel/env']
+        })
+      ).pipe(gulp.dest('dest/scripts'));
   });
 
   //delete dest folder
