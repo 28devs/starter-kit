@@ -1,0 +1,31 @@
+include ../inc/var.pug
+include ../inc/mixins.pug
+include ../blocks/header.pug
+include ../blocks/footer.pug
+
+doctype html
+html(lang="en" dir="ltr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+
+    block meta
+
+    block title
+      title Start
+    block head
+      link(href="styles/libs.min.css" rel="stylesheet")
+      link(href="styles/main.css" rel="stylesheet")
+
+  body
+    block header
+      +header
+
+    block content
+
+    block footer
+      +footer
+
+    block foot
+      script(type="text/javascript" src="scripts/libs.min.js")
+      script(type="text/javascript" src="scripts/main.js")

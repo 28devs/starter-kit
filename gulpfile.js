@@ -19,7 +19,8 @@
     gulpWatchPug = require('gulp-watch-pug'),
     cssbeautify = require('gulp-cssbeautify'),
     stripCssComments = require('gulp-strip-css-comments'),
-    cssDeclarationSorter = require('css-declaration-sorter');
+    cssDeclarationSorter = require('css-declaration-sorter'),
+    babel = require('gulp-babel');
 
   //write html by pug
   gulp.task('views', function buildHTML() {
@@ -39,7 +40,7 @@
     require('postcss-for'),
     require('postcss-each'),
     require('postcss-assets')({
-      loadPaths: ['img/', 'img/about', 'img/icons'],
+      loadPaths: ['img/', 'img/icons'],
       basePath: 'dest/',
       relative: 'styles/'
     }),
@@ -67,8 +68,6 @@
         'h4',
         'h5',
         '.btn',
-        '.sticky-nav__nav-link',
-        '.hero-blocks__item li'
       ]
     }),
     require('postcss-unique-selectors'),

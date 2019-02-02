@@ -1,7 +1,10 @@
-include inc/head.pug
-include inc/header.pug
+extends layouts/layout.pug
 
-| Start
+block header
+  +header()
 
-include inc/footer.pug
-include inc/foot.pug
+block title
+  title Home
+
+block content
+  //- include blocks/hero.pug
